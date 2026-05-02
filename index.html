@@ -50,12 +50,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);ove
 [lang="ar"] .timeline::before{left:auto;right:0;}
 [lang="ar"] .timeline-item::before{left:auto;right:-36px;}
 
-/* Mirror floating panels and deco elements positions - keep panels on right side, image moved left */
+/* Mirror floating panels positions - keep on right side but image & content on left */
 [lang="ar"] .data-panel.panel-1{right:auto;left:8%;}
 [lang="ar"] .data-panel.panel-2{right:auto;left:22%;}
 [lang="ar"] .data-panel.panel-3{right:auto;left:4%;}
-/* Image position adjusted for RTL but keep on left side as English layout */
-[lang="ar"] .hero-image-wrap{right:auto;left:5%;}
+/* RTL: image shift to left side but relative to content direction */
+[lang="ar"] .hero-main-flex{flex-direction:row-reverse;}
+[lang="ar"] .hero-image-wrap{margin-left:0;margin-right:40px;}
 [lang="ar"] .stats-row{left:auto;right:60px;}
 [lang="ar"] .scan-line{background:linear-gradient(90deg,transparent,rgba(139,92,246,0.4),transparent);}
 
@@ -92,7 +93,12 @@ nav.scrolled{background:rgba(5,8,16,0.88);border-bottom-color:var(--border);back
 .mini-bar{width:6px;background:var(--accent2);border-radius:2px;opacity:0.7;}
 .scan-line{position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(139,92,246,0.4),transparent);animation:scan 4s linear infinite;pointer-events:none;}
 @keyframes scan{0%{top:0%;opacity:0;}10%{opacity:1;}90%{opacity:1;}100%{top:100%;opacity:0;}}
-.hero-content{position:relative;z-index:2;max-width:620px;}
+
+/* NEW: flex row for hero content + image side by side */
+.hero-main-flex{display:flex; align-items:center; justify-content:space-between; gap:60px; position:relative; z-index:2; flex-wrap:wrap;}
+.hero-content{flex:1; max-width:620px;}
+.hero-image-wrap{flex-shrink:0; width:270px; animation:fadeUp 1s ease 0.4s both;}
+.hero-image-wrap img{width:100%; border-radius:32px; filter:drop-shadow(0 20px 30px rgba(0,0,0,0.5)); border:1px solid rgba(139,92,246,0.3); background:rgba(15,22,40,0.6); backdrop-filter:blur(4px);}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.25);border-radius:100px;padding:6px 16px;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent2);margin-bottom:28px;animation:fadeUp 0.8s ease both;}
 .hero-tag::before{content:'';width:6px;height:6px;background:var(--accent2);border-radius:50%;animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(0.8);}}
@@ -104,9 +110,6 @@ nav.scrolled{background:rgba(5,8,16,0.88);border-bottom-color:var(--border);back
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
 .hero-desc{font-size:1rem;line-height:1.7;color:#94a3b8;max-width:500px;margin-bottom:32px;animation:fadeUp 0.8s ease 0.2s both;}
 .hero-actions{display:flex;gap:16px;flex-wrap:wrap;animation:fadeUp 0.8s ease 0.3s both;}
-/* -- IMAGE POSITION MOVED to left side (near name) as requested, and away from right decoration panels -- */
-.hero-image-wrap{position:absolute;left:8%;bottom:5%;width:260px;z-index:2;animation:fadeUp 1s ease 0.4s both;}
-.hero-image-wrap img{width:100%;border-radius:32px;filter:drop-shadow(0 20px 30px rgba(0,0,0,0.5));border:1px solid rgba(139,92,246,0.3);background:rgba(15,22,40,0.6);backdrop-filter:blur(4px);}
 .stats-row{position:absolute;bottom:40px;left:60px;display:flex;gap:40px;z-index:2;animation:fadeUp 0.8s ease 0.5s both;}
 .stat-item .stat-num{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:white;line-height:1;}
 .stat-item .stat-num span{color:var(--accent);}
@@ -181,7 +184,8 @@ footer{padding:32px 60px;border-top:1px solid var(--border);display:flex;justify
 @media(max-width:900px){
   nav{padding:16px 24px;} .nav-links{display:none;}
   .container{padding:80px 24px;} #hero{padding:0 24px;flex-direction:column;}
-  .hero-image-wrap{position:relative;left:auto;bottom:auto;margin-top:30px;margin-bottom:20px;width:200px;}
+  .hero-main-flex{flex-direction:column; gap:30px;}
+  .hero-image-wrap{width:200px; margin-top:0;}
   .stats-row{left:24px;gap:24px;bottom:20px;}
   .data-panel{display:none;} #about .about-grid{grid-template-columns:1fr;gap:40px;}
   .projects-grid{grid-template-columns:1fr;} .project-card.featured{grid-column:span 1;}
@@ -190,7 +194,7 @@ footer{padding:32px 60px;border-top:1px solid var(--border);display:flex;justify
   footer{flex-direction:column;gap:12px;text-align:center;padding:24px;}
   .hero-name{white-space:normal;}
 }
-/* additional quick certifications floating section (direct access) */
+/* quick certifications strip */
 #quick-certs{background:transparent; margin-top:-40px; margin-bottom:20px;}
 .quick-cert-strip{background:rgba(15,22,40,0.7); backdrop-filter:blur(16px); border-radius:60px; border:1px solid var(--border); padding:12px 24px; display:inline-flex; flex-wrap:wrap; gap:24px; justify-content:center;}
 .quick-cert-strip a{color:var(--accent2); text-decoration:none; font-size:0.8rem; font-weight:500; letter-spacing:0.02em; transition:0.2s;}
@@ -203,17 +207,23 @@ footer{padding:32px 60px;border-top:1px solid var(--border);display:flex;justify
   <div class="data-panel panel-1"><div class="label">Data Records</div><div class="value">20K<span style="font-size:0.75rem;">+</span></div><div class="sub">▲ Analyzed & modeled</div><div class="mini-bars"><div class="mini-bar" style="height:40%"></div><div class="mini-bar" style="height:65%"></div><div class="mini-bar" style="height:50%"></div><div class="mini-bar" style="height:80%"></div><div class="mini-bar" style="height:70%"></div><div class="mini-bar" style="height:95%"></div><div class="mini-bar" style="height:85%"></div></div></div>
   <div class="data-panel panel-2"><div class="label">Certifications</div><div class="value">3<span style="font-size:0.75rem;">+</span></div><div class="sub">▲ Google - IBM</div></div>
   <div class="data-panel panel-3"><div class="label">Toolkits</div><div class="value">6<span style="font-size:0.75rem;">+</span></div><div class="sub">▲ Python, SQL, BI</div></div>
-  <div class="hero-content"><div class="hero-tag" data-en="Open for Junior Data Analyst Roles" data-ar="متاحة لفرص محلل بيانات">Open for Junior Data Analyst Roles</div>
-    <h1 class="hero-name">Mai <span class="accent-grad">Beltagy</span></h1>
-    <div class="typing-wrapper"><span data-en="Specialized in&nbsp;" data-ar="متخصصة في&nbsp;">Specialized in&nbsp;</span><span class="typed-text" id="typedText"></span><span class="cursor-blink"></span></div>
-    <p class="hero-desc" data-en="Junior Data Analyst & AI Specialist with engineering background. Transforming raw data into insights using Python, SQL, Power BI, and storytelling dashboards." data-ar="محللة بيانات وأخصائية ذكاء اصطناعي مبتدئة بخلفية هندسية. تحويل البيانات الخام إلى رؤى باستخدام Python و SQL و Power BI ولوحات معلومات قصصية.">Junior Data Analyst & AI Specialist with engineering background. Transforming raw data into insights using Python, SQL, Power BI, and storytelling dashboards.</p>
-    <div class="hero-actions"><a href="#projects" class="btn-primary" data-en="View Projects" data-ar="عرض المشاريع">View Projects</a><a href="#" id="cvDownloadBtn" class="btn-cv" data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</a><a href="https://linkedin.com/in/mai-beltagy" target="_blank" class="btn-outline">LinkedIn</a><a href="https://github.com/Mai-Beltagy" target="_blank" class="btn-outline">GitHub</a></div></div>
-  <!-- Image position moved to left next to name, away from right decorative elements -->
-  <div class="hero-image-wrap"><img src="mai-beltagy.png" alt="Mai Beltagy" style="object-fit:cover;border-radius:28px;"></div>
+  
+  <!-- NEW: flex row: content + image side by side (image next to name & everything under it) -->
+  <div class="hero-main-flex">
+    <div class="hero-content">
+      <div class="hero-tag" data-en="Open for Junior Data Analyst Roles" data-ar="متاحة لفرص محلل بيانات">Open for Junior Data Analyst Roles</div>
+      <h1 class="hero-name">Mai <span class="accent-grad">Beltagy</span></h1>
+      <div class="typing-wrapper"><span data-en="Specialized in&nbsp;" data-ar="متخصصة في&nbsp;">Specialized in&nbsp;</span><span class="typed-text" id="typedText"></span><span class="cursor-blink"></span></div>
+      <p class="hero-desc" data-en="Junior Data Analyst & AI Specialist with engineering background. Transforming raw data into insights using Python, SQL, Power BI, and storytelling dashboards." data-ar="محللة بيانات وأخصائية ذكاء اصطناعي مبتدئة بخلفية هندسية. تحويل البيانات الخام إلى رؤى باستخدام Python و SQL و Power BI ولوحات معلومات قصصية.">Junior Data Analyst & AI Specialist with engineering background. Transforming raw data into insights using Python, SQL, Power BI, and storytelling dashboards.</p>
+      <div class="hero-actions"><a href="#projects" class="btn-primary" data-en="View Projects" data-ar="عرض المشاريع">View Projects</a><a href="#" id="cvDownloadBtn" class="btn-cv" data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</a><a href="https://linkedin.com/in/mai-beltagy" target="_blank" class="btn-outline">LinkedIn</a><a href="https://github.com/Mai-Beltagy" target="_blank" class="btn-outline">GitHub</a></div>
+    </div>
+    <!-- image placed directly to the right of content (next to name and everything under) -->
+    <div class="hero-image-wrap"><img src="mai-beltagy.png" alt="Mai Beltagy" style="object-fit:cover;border-radius:28px;"></div>
+  </div>
   <div class="stats-row"><div class="stat-item"><div class="stat-num">3<span>+</span></div><div class="stat-label" data-en="Certifications" data-ar="شهادة">Certifications</div></div><div class="stat-item"><div class="stat-num">6<span>+</span></div><div class="stat-label" data-en="Tech Tools" data-ar="أدوات تقنية">Tech Tools</div></div><div class="stat-item"><div class="stat-num">2024</div><div class="stat-label" data-en="Graduated" data-ar="تخرجت">Graduated</div></div></div>
 </section>
 
-<!-- NEW quick certifications strip section above about, direct access to certifications -->
+<!-- quick certifications strip above about -->
 <section id="quick-certs"><div class="container" style="padding-top:0; padding-bottom:20px;"><div class="quick-cert-strip"><span style="color:var(--accent); font-weight:600;">📜 &nbsp;</span><a href="#certificates">📊 Google Data Foundations</a><span style="color:var(--border);">|</span><a href="#certificates">⚡ IBM Agile Quality</a><span style="color:var(--border);">|</span><a href="#certificates">🎓 Digilians AI & Data Analytics</a><span style="color:var(--border);">|</span><a href="#certificates">📈 Power BI & SQL Portfolio</a></div></div></section>
 
 <section id="about"><div class="container"><div class="section-header reveal"><span class="section-tag" data-en="Profile" data-ar="الملف الشخصي">Profile</span><h2 class="section-title" data-en="About Me" data-ar="عني">About Me</h2><div class="section-line"></div></div><div class="about-grid"><div class="about-text reveal">
@@ -262,7 +272,7 @@ function typeLoop(){
 typeLoop();
 function handleSubmit(e){ e.preventDefault(); const btn=document.querySelector('.btn-send'); btn.innerHTML=currentLang==='ar'?'جاري الإرسال...':'Sending...'; btn.disabled=true; setTimeout(()=>{ document.getElementById('contactForm').style.display='none'; document.getElementById('formSuccess').style.display='block'; },800); }
 const nav=document.getElementById('navbar'); window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
-const reveals=document.querySelectorAll('.reveal'); new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); e.target.querySelectorAll('.skill-fill').forEach(b=>b.classList.add('animated')); } }); },{threshold:0.15}).observe; 
+const reveals=document.querySelectorAll('.reveal'); 
 reveals.forEach(r=>new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');e.target.querySelectorAll('.skill-fill').forEach(b=>b.classList.add('animated'));}});},{threshold:0.15}).observe(r));
 </script>
 </body>
