@@ -79,7 +79,7 @@ nav.scrolled{background:rgba(5,8,16,0.88);border-bottom-color:var(--border);back
 #hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:0 60px;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(139,92,246,0.08) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 20% 80%,rgba(6,182,212,0.05) 0%,transparent 60%),linear-gradient(135deg,#050810 0%,#07101f 50%,#050810 100%);}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(139,92,246,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,0.04) 1px,transparent 1px);background-size:60px 60px;}
-.data-panel{position:absolute;background:rgba(15,22,40,0.7);border:1px solid rgba(139,92,246,0.2);border-radius:12px;backdrop-filter:blur(10px);padding:16px 20px;animation:float 6s ease-in-out infinite;z-index:3;}
+.data-panel{position:absolute;background:rgba(15,22,40,0.7);border:1px solid rgba(139,92,246,0.2);border-radius:12px;backdrop-filter:blur(10px);padding:16px 20px;animation:float 6s ease-in-out infinite;}
 .data-panel .label{font-size:0.65rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;}
 .data-panel .value{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--accent);}
 .data-panel .sub{font-size:0.7rem;color:#22d3ee;margin-top:4px;}
@@ -103,14 +103,8 @@ nav.scrolled{background:rgba(5,8,16,0.88);border-bottom-color:var(--border);back
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
 .hero-desc{font-size:1rem;line-height:1.7;color:#94a3b8;max-width:500px;margin-bottom:32px;animation:fadeUp 0.8s ease 0.2s both;}
 .hero-actions{display:flex;gap:16px;flex-wrap:wrap;animation:fadeUp 0.8s ease 0.3s both;}
-
-/* ========= UPDATED HERO IMAGE WRAP ========= */
-.hero-image-wrap{position:absolute;right:8%;bottom:5%;width:320px;z-index:1;animation:fadeUp 1s ease 0.4s both; display:flex; justify-content:center; align-items:flex-end;}
-.hero-image-wrap .image-container{ position:relative; width:100%; padding:10px; border-radius:40px; background:radial-gradient(circle at center, rgba(139,92,246,0.15) 0%, transparent 75%); border:1px solid rgba(139,92,246,0.2); overflow:hidden;}
-.hero-image-wrap img{width:100%; border-radius:32px; filter:drop-shadow(0 20px 40px rgba(0,0,0,0.6)); position:relative; z-index:2; display:block; transition: transform 0.5s ease;}
-.hero-image-wrap:hover img {transform: scale(1.02);}
-.image-bg-deco{ position:absolute; top:50%; left:50%; width:150%; height:150%; transform:translate(-50%,-50%); background:url('https://www.transparenttextures.com/patterns/stardust.png'); opacity:0.1; z-index:1; pointer-events:none;}
-
+.hero-image-wrap{position:absolute;right:5%;bottom:5%;width:280px;z-index:2;animation:fadeUp 1s ease 0.4s both;}
+.hero-image-wrap img{width:100%;border-radius:32px;filter:drop-shadow(0 20px 30px rgba(0,0,0,0.5));border:1px solid rgba(139,92,246,0.3);background:rgba(15,22,40,0.6);backdrop-filter:blur(4px);}
 .stats-row{position:absolute;bottom:40px;left:60px;display:flex;gap:40px;z-index:2;animation:fadeUp 0.8s ease 0.5s both;}
 .stat-item .stat-num{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:white;line-height:1;}
 .stat-item .stat-num span{color:var(--accent);}
@@ -184,9 +178,9 @@ footer{padding:32px 60px;border-top:1px solid var(--border);display:flex;justify
 .reveal.visible{opacity:1;transform:translateY(0);}
 @media(max-width:900px){
   nav{padding:16px 24px;} .nav-links{display:none;}
-  .container{padding:80px 24px;} #hero{padding:0 24px;flex-direction:column; justify-content: center;}
-  .hero-image-wrap{position:relative;right:auto;left:auto;margin:40px auto 20px;width:240px; order: -1;}
-  .stats-row{left:24px;gap:24px;bottom:20px; position: relative;}
+  .container{padding:80px 24px;} #hero{padding:0 24px;flex-direction:column;}
+  .hero-image-wrap{position:relative;right:auto;left:auto;margin-top:30px;width:200px;}
+  .stats-row{left:24px;gap:24px;bottom:20px;}
   .data-panel{display:none;} #about .about-grid{grid-template-columns:1fr;gap:40px;}
   .projects-grid{grid-template-columns:1fr;} .project-card.featured{grid-column:span 1;}
   .certs-grid{grid-template-columns:1fr;} .form-grid{grid-template-columns:1fr;}
@@ -207,15 +201,7 @@ footer{padding:32px 60px;border-top:1px solid var(--border);display:flex;justify
     <div class="typing-wrapper"><span data-en="Specialized in&nbsp;" data-ar="متخصصة في&nbsp;">Specialized in&nbsp;</span><span class="typed-text" id="typedText"></span><span class="cursor-blink"></span></div>
     <p class="hero-desc" data-en="Junior Data Analyst & AI Specialist with engineering background. Transforming raw data into insights using Python, SQL, Power BI, and storytelling dashboards." data-ar="محللة بيانات وأخصائية ذكاء اصطناعي مبتدئة بخلفية هندسية. تحويل البيانات الخام إلى رؤى باستخدام Python و SQL و Power BI ولوحات معلومات قصصية.">Junior Data Analyst & AI Specialist with engineering background. Transforming raw data into insights using Python, SQL, Power BI, and storytelling dashboards.</p>
     <div class="hero-actions"><a href="#projects" class="btn-primary" data-en="View Projects" data-ar="عرض المشاريع">View Projects</a><a href="#" id="cvDownloadBtn" class="btn-cv" data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</a><a href="https://linkedin.com/in/mai-beltagy" target="_blank" class="btn-outline">LinkedIn</a><a href="https://github.com/Mai-Beltagy" target="_blank" class="btn-outline">GitHub</a></div></div>
-  
-  <!-- ========= UPDATED HERO IMAGE SECTION ========= -->
-  <div class="hero-image-wrap">
-    <div class="image-container">
-        <div class="image-bg-deco"></div>
-        <img src="https://i.ibb.co/C3Y3C9rL/image.png" alt="Mai Beltagy - Data Analyst">
-    </div>
-  </div>
-
+  <div class="hero-image-wrap"><img src="mai-beltagy.png" alt="Mai Beltagy" style="object-fit:cover;border-radius:28px;"></div>
   <div class="stats-row"><div class="stat-item"><div class="stat-num">3<span>+</span></div><div class="stat-label" data-en="Certifications" data-ar="شهادة">Certifications</div></div><div class="stat-item"><div class="stat-num">6<span>+</span></div><div class="stat-label" data-en="Tech Tools" data-ar="أدوات تقنية">Tech Tools</div></div><div class="stat-item"><div class="stat-num">2024</div><div class="stat-label" data-en="Graduated" data-ar="تخرجت">Graduated</div></div></div>
 </section>
 <section id="about"><div class="container"><div class="section-header reveal"><span class="section-tag" data-en="Profile" data-ar="الملف الشخصي">Profile</span><h2 class="section-title" data-en="About Me" data-ar="عني">About Me</h2><div class="section-line"></div></div><div class="about-grid"><div class="about-text reveal">
