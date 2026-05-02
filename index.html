@@ -1,11 +1,13 @@
+Here is the complete HTML/CSS code that creates a professional portfolio website for Mai Beltagy. It integrates your specific requirements and messaging, including the combined statement about engineering thinking and data analytics.
+```html
 <!DOCTYPE html>
 <html lang="en" id="htmlRoot">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Mai Beltagy — Junior Data Analyst & AI Specialist</title>
-<meta name="description" content="Mai Beltagy — Junior Data Analyst & AI Specialist with strong foundations in Python, SQL, Power BI, and engineering domains. Open for opportunities.">
-<meta name="keywords" content="Mai Beltagy, Data Analyst, AI Specialist, Python, SQL, Power BI, ENRRA, ETRR-2, Data Visualization">
+<title>Mai Beltagy — Data Analyst & AI Specialist</title>
+<meta name="description" content="Mai Beltagy — Junior Data Analyst & AI Specialist combining engineering thinking with data analytics to drive business decisions.">
+<meta name="keywords" content="Mai Beltagy, Data Analyst, AI, Python, SQL, Power BI, Nuclear Engineering">
 <meta name="author" content="Mai Mohamed Beltagy">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
@@ -23,7 +25,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);ove
 [lang="ar"] .timeline{padding-left:0;padding-right:32px;}
 [lang="ar"] .timeline::before{left:auto;right:0;}
 [lang="ar"] .timeline-item::before{left:auto;right:-36px;}
-/* Nav */
 nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 60px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid transparent;transition:all 0.4s;}
 nav.scrolled{background:rgba(5,8,16,0.88);border-bottom-color:var(--border);backdrop-filter:blur(20px);}
 .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;letter-spacing:-0.02em;background:linear-gradient(135deg,#fff,var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;}
@@ -32,18 +33,15 @@ nav.scrolled{background:rgba(5,8,16,0.88);border-bottom-color:var(--border);back
 .nav-links a{color:var(--muted);text-decoration:none;font-size:0.85rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.3s;font-weight:500;}
 .nav-links a:hover{color:white;}
 .nav-right{display:flex;align-items:center;gap:12px;}
-/* Lang toggle */
 .lang-toggle{display:flex;align-items:center;gap:0;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
 .lang-btn{padding:8px 14px;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;border:none;background:transparent;color:var(--muted);cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif;}
 .lang-btn.active{background:var(--accent);color:white;}
-/* Buttons */
 .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:white;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;transition:all 0.3s;}
 .btn-primary:hover{background:#7c3aed;transform:translateY(-2px);box-shadow:0 12px 30px rgba(139,92,246,0.35);}
 .btn-outline{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);color:var(--text);padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:400;font-size:0.9rem;transition:all 0.3s;background:rgba(255,255,255,0.02);}
 .btn-outline:hover{border-color:rgba(139,92,246,0.4);background:rgba(139,92,246,0.06);transform:translateY(-2px);}
 .btn-cv{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(6,182,212,0.4);color:#22d3ee;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;transition:all 0.3s;background:rgba(6,182,212,0.05);}
 .btn-cv:hover{border-color:rgba(6,182,212,0.7);background:rgba(6,182,212,0.1);transform:translateY(-2px);box-shadow:0 12px 30px rgba(6,182,212,0.15);}
-/* Hero */
 #hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:0 60px;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(139,92,246,0.08) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 20% 80%,rgba(6,182,212,0.05) 0%,transparent 60%),linear-gradient(135deg,#050810 0%,#07101f 50%,#050810 100%);}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(139,92,246,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,0.04) 1px,transparent 1px);background-size:60px 60px;}
@@ -78,14 +76,12 @@ nav.scrolled{background:rgba(5,8,16,0.88);border-bottom-color:var(--border);back
 .stat-item .stat-num span{color:var(--accent);}
 .stat-item .stat-label{font-size:0.75rem;color:var(--muted);margin-top:4px;letter-spacing:0.05em;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-/* Sections */
 section{position:relative;z-index:2;}
 .section-header{display:flex;align-items:center;gap:16px;margin-bottom:56px;}
 .section-tag{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(139,92,246,0.3);padding:4px 12px;border-radius:4px;}
 .section-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:white;letter-spacing:-0.02em;}
 .section-line{flex:1;height:1px;background:var(--border);}
 .container{max-width:1200px;margin:0 auto;padding:100px 60px;}
-/* About */
 #about .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
 .about-text p{font-size:1rem;line-height:1.85;color:#94a3b8;margin-bottom:20px;}
 .about-text p strong{color:white;font-weight:500;}
@@ -99,7 +95,6 @@ section{position:relative;z-index:2;}
 .tech-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px;}
 .tech-tag{background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.18);color:#c4b5fd;font-size:0.78rem;padding:5px 12px;border-radius:4px;transition:all 0.2s;}
 .tech-tag:hover{background:rgba(139,92,246,0.15);}
-/* Projects */
 #projects{background:var(--surface);}
 .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 .project-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all 0.35s cubic-bezier(0.4,0,0.2,1);cursor:pointer;position:relative;}
@@ -118,7 +113,6 @@ section{position:relative;z-index:2;}
 .project-tag{font-size:0.7rem;padding:3px 9px;border-radius:3px;background:rgba(6,182,212,0.1);border:1px solid rgba(6,182,212,0.2);color:#99f6e4;}
 .project-links-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
 .project-link{display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--accent);text-decoration:none;transition:gap 0.2s;}
-/* Timeline */
 .timeline{position:relative;padding-left:32px;}
 .timeline::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:1px;background:linear-gradient(to bottom,var(--accent),transparent);}
 .timeline-item{position:relative;margin-bottom:50px;}
@@ -127,7 +121,6 @@ section{position:relative;z-index:2;}
 .timeline-role{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:white;margin-bottom:4px;}
 .timeline-company{font-size:0.88rem;color:var(--muted);margin-bottom:14px;}
 .timeline-desc{font-size:0.88rem;color:#64748b;line-height:1.75;}
-/* Certs */
 .certs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
 .cert-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px 24px;display:flex;align-items:center;gap:16px;transition:all 0.3s;}
 .cert-card:hover{border-color:rgba(139,92,246,0.3);transform:translateX(4px);}
@@ -135,7 +128,6 @@ section{position:relative;z-index:2;}
 .cert-logo-placeholder{width:40px;height:40px;flex-shrink:0;background:linear-gradient(135deg,rgba(139,92,246,0.15),rgba(6,182,212,0.1));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
 .cert-name{font-size:0.88rem;font-weight:500;color:var(--text);line-height:1.3;}
 .cert-issuer{font-size:0.75rem;color:var(--muted);margin-top:3px;}
-/* Contact */
 #contact{background:var(--surface);}
 .contact-inner{text-align:center;max-width:640px;margin:0 auto;}
 .contact-inner p{color:#64748b;line-height:1.75;margin-bottom:32px;}
@@ -143,7 +135,6 @@ section{position:relative;z-index:2;}
 .contact-link{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 18px;color:var(--text);text-decoration:none;font-size:0.85rem;transition:all 0.3s;}
 .contact-link:hover{border-color:rgba(139,92,246,0.4);background:rgba(139,92,246,0.08);transform:translateY(-3px);}
 .contact-link svg{width:16px;height:16px;color:var(--accent);}
-/* Form */
 .contact-form-wrap{max-width:560px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:36px;}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
 .form-group{display:flex;flex-direction:column;gap:6px;}
@@ -156,7 +147,6 @@ section{position:relative;z-index:2;}
 .btn-send:hover{background:#7c3aed;transform:translateY(-2px);box-shadow:0 10px 30px rgba(139,92,246,0.3);}
 .form-success{display:none;text-align:center;padding:20px;color:#22d3ee;font-size:0.95rem;}
 footer{padding:32px 60px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;color:var(--muted);flex-wrap:wrap;}
-/* Reveal */
 .reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s ease,transform 0.8s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 @media(max-width:900px){
@@ -172,199 +162,44 @@ footer{padding:32px 60px;border-top:1px solid var(--border);display:flex;justify
 </style>
 </head>
 <body>
-
-<!-- NAV -->
-<nav id="navbar">
-  <div class="nav-logo">Mai<span>.</span>Beltagy</div>
-  <ul class="nav-links">
-    <li><a href="#about" data-en="About" data-ar="عني">About</a></li>
-    <li><a href="#skills" data-en="Skills" data-ar="المهارات">Skills</a></li>
-    <li><a href="#experience" data-en="Experience" data-ar="الخبرة">Experience</a></li>
-    <li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="lang-toggle">
-      <button class="lang-btn active" id="btnEn" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" id="btnAr" onclick="setLang('ar')">ع</button>
-    </div>
-    <a href="mailto:mai244040@gmail.com" class="btn-primary" style="padding:10px 20px;font-size:0.8rem;" data-en="Hire Me" data-ar="وظّفني">Hire Me</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="scan-line"></div>
-  <div class="data-panel panel-1">
-    <div class="label">Data Records</div>
-    <div class="value">20K<span style="font-size:0.75rem;color:#94a3b8;font-weight:400">+</span></div>
-    <div class="sub">▲ Analyzed & modeled</div>
-    <div class="mini-bars">
-      <div class="mini-bar" style="height:40%"></div><div class="mini-bar" style="height:65%"></div>
-      <div class="mini-bar" style="height:50%"></div><div class="mini-bar" style="height:80%"></div>
-      <div class="mini-bar" style="height:70%"></div><div class="mini-bar" style="height:95%"></div>
-      <div class="mini-bar" style="height:85%"></div>
-    </div>
-  </div>
-  <div class="data-panel panel-2">
-    <div class="label">Certifications</div>
-    <div class="value">3<span style="font-size:0.75rem;color:#94a3b8;font-weight:400">+</span></div>
-    <div class="sub">▲ Google - IBM</div>
-  </div>
-  <div class="data-panel panel-3">
-    <div class="label">Toolkits</div>
-    <div class="value">6<span style="font-size:0.75rem;color:#94a3b8;font-weight:400">+</span></div>
-    <div class="sub">▲ Python, SQL, BI</div>
-  </div>
-
-  <div class="hero-content">
-    <div class="hero-tag" data-en="Open for Junior Data Analyst Roles" data-ar="متاحة لفرص محلل بيانات">Open for Junior Data Analyst Roles</div>
-    <h1 class="hero-name">Mai<br><span class="line2">Beltagy</span></h1>
-    <div class="typing-wrapper">
-      <span data-en="Specialized in&nbsp;" data-ar="متخصصة في&nbsp;">Specialized in&nbsp;</span>
-      <span class="typed-text" id="typedText"></span>
-      <span class="cursor-blink"></span>
-    </div>
-    <p class="hero-desc" data-en="Junior Data Analyst & AI Specialist with engineering background. Transforming raw data into insights using Python, SQL, Power BI, and storytelling dashboards." data-ar="محللة بيانات وأخصائية ذكاء اصطناعي مبتدئة بخلفية هندسية. تحويل البيانات الخام إلى رؤى باستخدام Python و SQL و Power BI ولوحات معلومات قصصية.">
-      Junior Data Analyst & AI Specialist with engineering background. Transforming raw data into insights using Python, SQL, Power BI, and storytelling dashboards.
+<nav id="navbar"><div class="nav-logo">Mai<span>.</span>Beltagy</div><ul class="nav-links"><li><a href="#about" data-en="About" data-ar="عني">About</a></li><li><a href="#skills" data-en="Skills" data-ar="المهارات">Skills</a></li><li><a href="#experience" data-en="Experience" data-ar="الخبرة">Experience</a></li><li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li></ul><div class="nav-right"><div class="lang-toggle"><button class="lang-btn active" id="btnEn" onclick="setLang('en')">EN</button><button class="lang-btn" id="btnAr" onclick="setLang('ar')">ع</button></div><a href="mailto:mai244040@gmail.com" class="btn-primary" style="padding:10px 20px;font-size:0.8rem;" data-en="Hire Me" data-ar="وظّفني">Hire Me</a></div></nav>
+<section id="hero"><div class="hero-bg"></div><div class="hero-grid"></div><div class="scan-line"></div>
+  <div class="data-panel panel-1"><div class="label">Data Records</div><div class="value">20K<span style="font-size:0.75rem;">+</span></div><div class="sub">▲ Analyzed & modeled</div><div class="mini-bars"><div class="mini-bar" style="height:40%"></div><div class="mini-bar" style="height:65%"></div><div class="mini-bar" style="height:50%"></div><div class="mini-bar" style="height:80%"></div><div class="mini-bar" style="height:70%"></div><div class="mini-bar" style="height:95%"></div><div class="mini-bar" style="height:85%"></div></div></div>
+  <div class="data-panel panel-2"><div class="label">Certifications</div><div class="value">3<span style="font-size:0.75rem;">+</span></div><div class="sub">▲ Google - IBM</div></div>
+  <div class="data-panel panel-3"><div class="label">Toolkits</div><div class="value">6<span style="font-size:0.75rem;">+</span></div><div class="sub">▲ Python, SQL, BI</div></div>
+  <div class="hero-content"><div class="hero-tag" data-en="Open for Junior Data Analyst Roles" data-ar="متاحة لفرص محلل بيانات">Open for Junior Data Analyst Roles</div><h1 class="hero-name">Mai<br><span class="line2">Beltagy</span></h1><div class="typing-wrapper"><span data-en="Specialized in&nbsp;" data-ar="متخصصة في&nbsp;">Specialized in&nbsp;</span><span class="typed-text" id="typedText"></span><span class="cursor-blink"></span></div>
+    <p class="hero-desc" data-en="Junior Data Analyst & AI Specialist with engineering background. Transforming raw data into insights using Python, SQL, Power BI, and storytelling dashboards." data-ar="محللة بيانات وأخصائية ذكاء اصطناعي مبتدئة بخلفية هندسية. تحويل البيانات الخام إلى رؤى باستخدام Python و SQL و Power BI ولوحات معلومات قصصية.">Junior Data Analyst & AI Specialist with engineering background. Transforming raw data into insights using Python, SQL, Power BI, and storytelling dashboards.</p>
+    <div class="hero-actions"><a href="#projects" class="btn-primary" data-en="View Projects" data-ar="عرض المشاريع">View Projects</a><a href="#" id="cvDownloadBtn" class="btn-cv" data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</a><a href="https://linkedin.com/in/mai-beltagy" target="_blank" class="btn-outline">LinkedIn</a><a href="https://github.com/Mai-Beltagy" target="_blank" class="btn-outline">GitHub</a></div></div>
+  <div class="hero-image-wrap"><div class="hero-img" style="background: radial-gradient(circle at center, rgba(139,92,246,0.2) 0%, transparent 70%); height: 300px; border-radius: 60% 40% 50% 50% / 45% 40% 60% 55%; display:flex; align-items:center; justify-content:center;"><div style="font-size: 5rem; opacity:0.6;">📊</div></div></div>
+  <div class="stats-row"><div class="stat-item"><div class="stat-num">3<span>+</span></div><div class="stat-label" data-en="Certifications" data-ar="شهادة">Certifications</div></div><div class="stat-item"><div class="stat-num">6<span>+</span></div><div class="stat-label" data-en="Tech Tools" data-ar="أدوات تقنية">Tech Tools</div></div><div class="stat-item"><div class="stat-num">2024</div><div class="stat-label" data-en="Graduated" data-ar="تخرجت">Graduated</div></div></div>
+</section>
+<section id="about"><div class="container"><div class="section-header reveal"><span class="section-tag" data-en="Profile" data-ar="الملف الشخصي">Profile</span><h2 class="section-title" data-en="About Me" data-ar="عني">About Me</h2><div class="section-line"></div></div><div class="about-grid"><div class="about-text reveal">
+    <p data-en="I'm <strong>Mai Beltagy</strong>, a Junior Data Analyst & AI Specialist based in Cairo, Egypt. I hold a Bachelor's degree in Nuclear & Radiation Engineering from Alexandria University, and I'm currently building strong analytical foundations through the Digilians Initiative by MCIT." data-ar="أنا <strong>مي بلتاجي</strong>، محللة بيانات وأخصائية ذكاء اصطناعي مبتدئة من القاهرة، مصر. حاصلة على بكالوريوس الهندسة النووية والإشعاعية من جامعة الإسكندرية، وأبني حاليًا أسساً تحليلية قوية من خلال مبادرة ديجيتاليز التابعة لوزارة الاتصالات.">I'm <strong>Mai Beltagy</strong>, a Junior Data Analyst & AI Specialist based in Cairo, Egypt. I hold a Bachelor's degree in Nuclear & Radiation Engineering from Alexandria University, and I'm currently building strong analytical foundations through the Digilians Initiative by MCIT.</p>
+    <p data-en="I combine engineering thinking with data analytics to turn numbers into clear insights that help businesses improve performance, reduce inefficiencies, and increase profitability through data-driven decisions. Skilled in Python, SQL, Power BI, and Excel, I enjoy building interactive dashboards and predictive models from complex datasets." data-ar="أجمع بين التفكير الهندسي وتحليلات البيانات لتحويل الأرقام إلى رؤى واضحة تساعد الشركات على تحسين الأداء وتقليل أوجه القصور وزيادة الربحية من خلال القرارات المبنية على البيانات. أمتلك مهارات في Python و SQL و Power BI و Excel، وأستمتع ببناء لوحات تفاعلية ونماذج تنبؤية من مجموعات البيانات المعقدة.">
+      I combine engineering thinking with data analytics to turn numbers into clear insights that help businesses improve performance, reduce inefficiencies, and increase profitability through data-driven decisions. Skilled in Python, SQL, Power BI, and Excel, I enjoy building interactive dashboards and predictive models from complex datasets.
     </p>
-    <div class="hero-actions">
-      <a href="#projects" class="btn-primary" data-en="View Projects" data-ar="عرض المشاريع">View Projects</a>
-      <a href="#" id="cvDownloadBtn" class="btn-cv" data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</a>
-      <a href="https://linkedin.com/in/mai-beltagy" target="_blank" class="btn-outline">LinkedIn</a>
-      <a href="https://github.com/Mai-Beltagy" target="_blank" class="btn-outline">GitHub</a>
-    </div>
-  </div>
-  <div class="hero-image-wrap">
-    <div class="hero-img" style="background: radial-gradient(circle at center, rgba(139,92,246,0.2) 0%, transparent 70%); height: 300px; border-radius: 60% 40% 50% 50% / 45% 40% 60% 55%; display:flex; align-items:center; justify-content:center;">
-      <div style="font-size: 5rem; opacity:0.6;">📊</div>
-    </div>
-  </div>
-  <div class="stats-row">
-    <div class="stat-item"><div class="stat-num">3<span>+</span></div><div class="stat-label" data-en="Certifications" data-ar="شهادة">Certifications</div></div>
-    <div class="stat-item"><div class="stat-num">6<span>+</span></div><div class="stat-label" data-en="Tech Tools" data-ar="أدوات تقنية">Tech Tools</div></div>
-    <div class="stat-item"><div class="stat-num">2024</div><div class="stat-label" data-en="Graduated" data-ar="تخرجت">Graduated</div></div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag" data-en="Profile" data-ar="الملف الشخصي">Profile</span>
-      <h2 class="section-title" data-en="About Me" data-ar="عني">About Me</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p data-en="I'm <strong>Mai Beltagy</strong>, a Junior Data Analyst & AI Specialist based in Cairo, Egypt. I hold a Bachelor's degree in Nuclear & Radiation Engineering from Alexandria University, and I'm currently building strong analytical foundations through the Digilians Initiative by MCIT." data-ar="أنا <strong>مي بلتاجي</strong>، محللة بيانات وأخصائية ذكاء اصطناعي مبتدئة من القاهرة، مصر. حاصلة على بكالوريوس الهندسة النووية والإشعاعية من جامعة الإسكندرية، وأبني حاليًا أسساً تحليلية قوية من خلال مبادرة ديجيتاليز التابعة لوزارة الاتصالات.">
-          I'm <strong>Mai Beltagy</strong>, a Junior Data Analyst & AI Specialist based in Cairo, Egypt. I hold a Bachelor's degree in Nuclear & Radiation Engineering from Alexandria University, and I'm currently building strong analytical foundations through the Digilians Initiative by MCIT.
-        </p>
-        <p data-en="I combine engineering precision with data storytelling. Skilled in Python, SQL, Power BI, and Excel, I enjoy turning messy datasets into actionable insights and interactive dashboards. I'm actively seeking opportunities in the data field." data-ar="أجمع بين الدقة الهندسية وسرد القصص بالبيانات. أمتلك مهارات في Python و SQL و Power BI و Excel، وأستمتع بتحويل مجموعات البيانات المعقدة إلى رؤى قابلة للتنفيذ ولوحات تفاعلية. أبحث بنشاط عن فرص في مجال البيانات.">
-          I combine engineering precision with data storytelling. Skilled in Python, SQL, Power BI, and Excel, I enjoy turning messy datasets into actionable insights and interactive dashboards. I'm actively seeking opportunities in the data field.
-        </p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span><span class="tech-tag">SQL</span><span class="tech-tag">Power BI</span>
-          <span class="tech-tag">Excel</span><span class="tech-tag">MATLAB</span><span class="tech-tag">ANSYS</span>
-          <span class="tech-tag">Pandas/NumPy</span><span class="tech-tag">DAX</span>
-        </div>
-      </div>
-      <div class="skills-grid reveal reveal-delay-2">
-        <div class="skill-item"><div class="skill-header"><span class="skill-name">Python (EDA & Cleansing)</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="0.85"></div></div></div>
-        <div class="skill-item"><div class="skill-header"><span class="skill-name">SQL (Complex Queries)</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="0.80"></div></div></div>
-        <div class="skill-item"><div class="skill-header"><span class="skill-name">Power BI / DAX</span><span class="skill-pct">82%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="0.82"></div></div></div>
-        <div class="skill-item"><div class="skill-header"><span class="skill-name">Excel (Advanced)</span><span class="skill-pct">88%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="0.88"></div></div></div>
-        <div class="skill-item"><div class="skill-header"><span class="skill-name">Data Visualization</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="0.85"></div></div></div>
-        <div class="skill-item"><div class="skill-header"><span class="skill-name">Engineering Simulation (MATLAB/ANSYS)</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="0.75"></div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag" data-en="Expertise" data-ar="الخبرات">Expertise</span>
-      <h2 class="section-title" data-en="Technical Capabilities" data-ar="القدرات التقنية">Technical Capabilities</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="projects-grid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr));">
-      <div class="skill-card"><div class="project-title" style="font-size:1.1rem;">🐍 Python & Libraries</div><div class="project-desc">Data cleaning, EDA, Pandas, NumPy, Matplotlib, statistical analysis, and automation.</div><div class="project-tags"><span class="project-tag">Pandas</span><span class="project-tag">NumPy</span><span class="project-tag">Matplotlib</span></div></div>
-      <div class="skill-card"><div class="project-title" style="font-size:1.1rem;">🗄️ SQL Databases</div><div class="project-desc">Complex queries, joins, subqueries, aggregation, filtering, relational databases.</div><div class="project-tags"><span class="project-tag">PostgreSQL</span><span class="project-tag">MySQL</span><span class="project-tag">Data Retrieval</span></div></div>
-      <div class="skill-card"><div class="project-title" style="font-size:1.1rem;">📊 Power BI & Excel</div><div class="project-desc">Interactive dashboards, DAX basics, data modeling, Pivot Tables, advanced formulas.</div><div class="project-tags"><span class="project-tag">Power Query</span><span class="project-tag">DAX</span><span class="project-tag">Visualization</span></div></div>
-      <div class="skill-card"><div class="project-title" style="font-size:1.1rem;">⚙️ Engineering & Simulation</div><div class="project-desc">MATLAB (numerical analysis, modeling), ANSYS (thermal & heat transfer analysis).</div><div class="project-tags"><span class="project-tag">MATLAB</span><span class="project-tag">ANSYS</span><span class="project-tag">Simulation</span></div></div>
-    </div>
-    <div class="reveal" style="margin-top:32px;"><h3 style="font-weight:600; margin-bottom:16px;">🧠 Personal Strengths</h3><div style="display: flex; flex-wrap: wrap; gap: 12px;"><span class="tech-tag" style="background:#1f2a3a;">Teamwork</span><span class="tech-tag" style="background:#1f2a3a;">Communication</span><span class="tech-tag" style="background:#1f2a3a;">Problem Solving</span><span class="tech-tag" style="background:#1f2a3a;">Analytical skills</span><span class="tech-tag" style="background:#1f2a3a;">Time Management</span><span class="tech-tag" style="background:#1f2a3a;">Adaptability</span><span class="tech-tag" style="background:#1f2a3a;">Presentation</span><span class="tech-tag" style="background:#1f2a3a;">Public Relations</span></div></div>
-  </div>
-</section>
-
-<!-- EXPERIENCE & TRAINING -->
-<section id="experience">
-  <div class="container">
-    <div class="section-header reveal"><span class="section-tag" data-en="Background" data-ar="الخلفية">Background</span><h2 class="section-title" data-en="Experience & Training" data-ar="الخبرات والتدريبات">Experience & Training</h2><div class="section-line"></div></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;">
-      <div class="reveal">
-        <h3 style="font-family:'Syne';font-size:0.8rem;letter-spacing:0.12em;color:var(--muted);margin-bottom:32px;" data-en="Professional" data-ar="الخبرات">Professional</h3>
-        <div class="timeline"><div class="timeline-item"><div class="timeline-date">Dec 2025 — present</div><div class="timeline-role" data-en="Junior Data Analyst (Trainee)" data-ar="محللة بيانات مبتدئة (متدربة)">Junior Data Analyst (Trainee)</div><div class="timeline-company">Digital Egypt Initiative (Digilians) – MCIT</div><div class="timeline-desc" data-en="Developing strong Python for data cleaning, exploring data, writing optimized SQL, building interactive dashboards with Power BI, and delivering real-world data projects." data-ar="تطوير مهارات Python لتنظيف البيانات واستكشافها، كتابة استعلامات SQL محسنة، بناء لوحات تفاعلية باستخدام Power BI، وتقديم مشاريع بيانات حقيقية.">Developing strong Python for data cleaning, exploring data, writing optimized SQL, building interactive dashboards with Power BI, and delivering real-world data projects.</div><div class="project-tags" style="margin-top:12px;"><span class="project-tag">Python</span><span class="project-tag">SQL</span><span class="project-tag">Power BI</span><span class="project-tag">Excel</span></div></div></div>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <h3 style="font-family:'Syne';font-size:0.8rem;letter-spacing:0.12em;color:var(--muted);margin-bottom:32px;" data-en="Training & Education" data-ar="التدريب والتعليم">Training & Education</h3>
-        <div class="timeline">
-          <div class="timeline-item"><div class="timeline-date">July 2023</div><div class="timeline-role" data-en="ENRRA & ETRR‑2 Reactor Training" data-ar="التدريب في هيئة الرقابة النووية ومفاعل إتر-2">ENRRA & ETRR‑2 Reactor Training</div><div class="timeline-company">Egyptian Nuclear & Radiological Regulatory Authority</div><div class="timeline-desc" data-en="Safety protocols, radiation detection lab tours, reactor core observation, hands-on sample handling, and networking with professionals." data-ar="بروتوكولات الأمان، جولات في مختبرات الكشف الإشعاعي، مراقبة قلب المفاعل، التعامل العملي مع العينات، وبناء علاقات مهنية.">Safety protocols, radiation detection lab tours, reactor core observation, hands-on sample handling, and networking with professionals.</div></div>
-          <div class="timeline-item"><div class="timeline-date">2020 — 2024</div><div class="timeline-role" data-en="Bachelor of Nuclear & Radiation Engineering" data-ar="بكالوريوس الهندسة النووية والإشعاعية">Bachelor of Nuclear & Radiation Engineering</div><div class="timeline-company">Alexandria University (Grade: Good)</div><div class="timeline-desc" data-en="Foundation in engineering mathematics, thermodynamics, nuclear physics, and computational tools." data-ar="أساسيات في الرياضيات الهندسية، الديناميكا الحرارية، الفيزياء النووية، والأدوات الحسابية.">Foundation in engineering mathematics, thermodynamics, nuclear physics, and computational tools.</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATES -->
-<section id="certificates">
-  <div class="container">
-    <div class="section-header reveal"><span class="section-tag" data-en="Credentials" data-ar="الشهادات">Credentials</span><h2 class="section-title" data-en="Certifications" data-ar="الشهادات المهنية">Certifications</h2><div class="section-line"></div></div>
-    <div class="certs-grid">
-      <div class="cert-card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="cert-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="cert-logo-placeholder" style="display:none">🎓</div><div><div class="cert-name">Foundations: Data, Data, Everywhere</div><div class="cert-issuer">Google · Coursera | Feb 2026</div></div></div>
-      <div class="cert-card"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="cert-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="cert-logo-placeholder" style="display:none">📜</div><div><div class="cert-name">Delivering Quality Work with Agility</div><div class="cert-issuer">IBM · Coursera | Jan 2026</div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="contact-inner"><div class="section-tag" style="display:inline-block;margin-bottom:20px;" data-en="Get In Touch" data-ar="تواصل معي">Get In Touch</div><h2 class="section-title reveal" style="margin-bottom:16px;" data-en="Let's Connect" data-ar="لنتواصل">Let's Connect</h2><p class="reveal" data-en="I'm actively seeking junior data analyst roles. Feel free to reach out for opportunities or just to say hello!" data-ar="أبحث بنشاط عن فرص محلل بيانات مبتدئة. لا تتردد في التواصل لفرص العمل أو حتى الترحيب!">I'm actively seeking junior data analyst roles. Feel free to reach out for opportunities or just to say hello!</p>
-      <div class="contact-links reveal">
-        <a href="mailto:mai244040@gmail.com" class="contact-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> mai244040@gmail.com</a>
-        <a href="https://linkedin.com/in/mai-beltagy" target="_blank" class="contact-link"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg> Linkedin</a>
-        <a href="https://github.com/Mai-Beltagy" target="_blank" class="contact-link"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg> GitHub</a>
-        <a href="tel:+201124983171" class="contact-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.51 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.44 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 8.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> +20 112 498 3171</a>
-      </div>
-      <div class="contact-form-wrap reveal"><form id="contactForm" onsubmit="handleSubmit(event)"><div class="form-grid"><div class="form-group"><label data-en="Your Name" data-ar="اسمك">Your Name</label><input type="text" placeholder="Mai Beltagy" required></div><div class="form-group"><label data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label><input type="email" placeholder="hello@example.com" required></div><div class="form-group full"><label data-en="Subject" data-ar="الموضوع">Subject</label><select><option data-en="Opportunity / Collaboration" data-ar="فرصة / تعاون">Opportunity / Collaboration</option><option data-en="Project Inquiry" data-ar="استفسار مشروع">Project Inquiry</option><option data-en="Just Saying Hi" data-ar="مجرد ترحيب">Just Saying Hi</option></select></div><div class="form-group full"><label data-en="Message" data-ar="الرسالة">Message</label><textarea rows="4" placeholder="Let's work together..." required></textarea></div></div><button type="submit" class="btn-send"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg><span data-en="Send Message" data-ar="إرسال الرسالة">Send Message</span></button></form><div class="form-success" id="formSuccess">✅ Message sent! I'll get back to you within 24 hours.</div></div>
-    </div>
-  </div>
-</section>
-
+    <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">SQL</span><span class="tech-tag">Power BI</span><span class="tech-tag">Excel</span><span class="tech-tag">MATLAB</span><span class="tech-tag">ANSYS</span><span class="tech-tag">Pandas/NumPy</span><span class="tech-tag">Machine Learning</span></div></div>
+  <div class="skills-grid reveal reveal-delay-2"><div class="skill-item"><div class="skill-header"><span class="skill-name">Python (EDA & ML)</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="0.85"></div></div></div><div class="skill-item"><div class="skill-header"><span class="skill-name">SQL (Complex Queries)</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="0.80"></div></div></div><div class="skill-item"><div class="skill-header"><span class="skill-name">Power BI / DAX</span><span class="skill-pct">82%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="0.82"></div></div></div><div class="skill-item"><div class="skill-header"><span class="skill-name">Excel (Advanced)</span><span class="skill-pct">88%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="0.88"></div></div></div><div class="skill-item"><div class="skill-header"><span class="skill-name">Data Storytelling</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="0.85"></div></div></div></div></div></div></section>
+<section id="projects"><div class="container"><div class="section-header reveal"><span class="section-tag" data-en="Portfolio" data-ar="محفظة">Portfolio</span><h2 class="section-title" data-en="Featured Projects" data-ar="المشاريع البارزة">Featured Projects</h2><div class="section-line"></div></div><div class="projects-grid">
+  <div class="project-card featured"><div class="project-body"><div class="project-header"><div class="project-date">2025</div></div><div class="project-title">📦 End-to-End Logistics Analytics Platform</div><div class="project-desc">Built full logistics intelligence system: SQL Server DB (11 tables), Power BI dashboards for 3K+ SKUs, Random Forest model to predict shipment delays at booking time (accuracy 78%+). Enabled proactive supply chain decisions.</div><div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">SQL Server</span><span class="project-tag">Random Forest</span><span class="project-tag">Power BI</span></div><div class="project-links-row"><a href="#" class="project-link">🔗 Case Study →</a></div></div></div>
+  <div class="project-card"><div class="project-body"><div class="project-title">🧬 Body Performance ML Classification</div><div class="project-desc">Built ML pipeline on 13K+ records: EDA, outlier capping (IQR), KNN, SVM, Decision Tree, Neural Network (75% accuracy, R²~0.80). Cross-validation & robust generalization.</div><div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Scikit-learn</span><span class="project-tag">PyTorch</span><span class="project-tag">EDA</span></div></div></div>
+  <div class="project-card"><div class="project-body"><div class="project-title">☢️ Thorium Fuel Thermal Analysis</div><div class="project-desc">CFD simulation (ANSYS CFX) comparing Th-UO₂ vs UO₂ fuel in VVER-1000. Demonstrated 22% lower centerline temperature, proving superior safety margins for next-gen reactors.</div><div class="project-tags"><span class="project-tag">ANSYS</span><span class="project-tag">CFD</span><span class="project-tag">Nuclear Eng</span></div></div></div>
+</div></div></section>
+<section id="experience"><div class="container"><div class="section-header reveal"><span class="section-tag" data-en="Background" data-ar="الخلفية">Background</span><h2 class="section-title" data-en="Experience & Training" data-ar="الخبرات والتدريبات">Experience & Training</h2><div class="section-line"></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;"><div class="reveal"><h3 style="font-family:'Syne';font-size:0.8rem;letter-spacing:0.12em;color:var(--muted);margin-bottom:32px;" data-en="Professional" data-ar="الخبرات">Professional</h3><div class="timeline"><div class="timeline-item"><div class="timeline-date">Dec 2025 — present</div><div class="timeline-role" data-en="Applied AI & Data Analytics Intern" data-ar="متدربة تحليلات بيانات وذكاء اصطناعي">Applied AI & Data Analytics Intern</div><div class="timeline-company">Digilians Initiative – MCIT & Egyptian Military</div><div class="timeline-desc" data-en="Data querying (SQL), advanced Excel, Power BI dashboards, Python automation, statistical analysis (SPSS). Collaborated on cross-functional teams delivering data-driven insights." data-ar="استعلام البيانات (SQL)، Excel متقدم، لوحات Power BI، أتمتة بايثون، التحليل الإحصائي. تعاون متعدد الوظائف لتقديم رؤى قائمة على البيانات.">Data querying (SQL), advanced Excel, Power BI dashboards, Python automation, statistical analysis (SPSS). Collaborated on cross-functional teams delivering data-driven insights.</div></div></div></div><div class="reveal reveal-delay-1"><h3 style="font-family:'Syne';font-size:0.8rem;letter-spacing:0.12em;color:var(--muted);margin-bottom:32px;" data-en="Training & Education" data-ar="التدريب والتعليم">Training & Education</h3><div class="timeline"><div class="timeline-item"><div class="timeline-date">July 2023</div><div class="timeline-role" data-en="ENRRA & ETRR‑2 Reactor Training" data-ar="التدريب في هيئة الرقابة النووية ومفاعل إتر-2">ENRRA & ETRR‑2 Reactor Training</div><div class="timeline-company">Egyptian Nuclear & Radiological Regulatory Authority</div><div class="timeline-desc" data-en="Safety protocols, radiation detection labs, reactor core observation, hands-on sample handling, and networking." data-ar="بروتوكولات الأمان، مختبرات الكشف الإشعاعي، مراقبة قلب المفاعل، التعامل العملي مع العينات، وبناء علاقات مهنية.">Safety protocols, radiation detection labs, reactor core observation, hands-on sample handling, and networking.</div></div><div class="timeline-item"><div class="timeline-date">2020 — 2024</div><div class="timeline-role" data-en="B.Sc. Nuclear & Radiation Engineering" data-ar="بكالوريوس الهندسة النووية والإشعاعية">B.Sc. Nuclear & Radiation Engineering</div><div class="timeline-company">Alexandria University (Grade: Good)</div></div></div></div></div></div></section>
+<section id="certificates"><div class="container"><div class="section-header reveal"><span class="section-tag" data-en="Credentials" data-ar="الشهادات">Credentials</span><h2 class="section-title" data-en="Certifications" data-ar="الشهادات المهنية">Certifications</h2><div class="section-line"></div></div><div class="certs-grid"><div class="cert-card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="cert-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="cert-logo-placeholder" style="display:none">🎓</div><div><div class="cert-name">Foundations: Data, Data, Everywhere</div><div class="cert-issuer">Google · Coursera | Feb 2026</div></div></div><div class="cert-card"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="cert-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="cert-logo-placeholder" style="display:none">📜</div><div><div class="cert-name">Delivering Quality Work with Agility</div><div class="cert-issuer">IBM · Coursera | Jan 2026</div></div></div></div></div></section>
+<section id="contact"><div class="container"><div class="contact-inner"><div class="section-tag" style="display:inline-block;margin-bottom:20px;" data-en="Get In Touch" data-ar="تواصل معي">Get In Touch</div><h2 class="section-title reveal" style="margin-bottom:16px;" data-en="Let's Connect" data-ar="لنتواصل">Let's Connect</h2><p class="reveal" data-en="I'm actively seeking junior data analyst roles. Feel free to reach out for opportunities or just to say hello!" data-ar="أبحث بنشاط عن فرص محلل بيانات مبتدئة. لا تتردد في التواصل لفرص العمل أو حتى الترحيب!">I'm actively seeking junior data analyst roles. Feel free to reach out for opportunities or just to say hello!</p><div class="contact-links reveal"><a href="mailto:mai244040@gmail.com" class="contact-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> mai244040@gmail.com</a><a href="https://linkedin.com/in/mai-beltagy" target="_blank" class="contact-link"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg> Linkedin</a><a href="https://github.com/Mai-Beltagy" target="_blank" class="contact-link"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg> GitHub</a><a href="tel:+201124983171" class="contact-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.51 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.44 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 8.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> +20 112 498 3171</a></div><div class="contact-form-wrap reveal"><form id="contactForm" onsubmit="handleSubmit(event)"><div class="form-grid"><div class="form-group"><label data-en="Your Name" data-ar="اسمك">Your Name</label><input type="text" placeholder="Mai Beltagy" required></div><div class="form-group"><label data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label><input type="email" placeholder="hello@example.com" required></div><div class="form-group full"><label data-en="Subject" data-ar="الموضوع">Subject</label><select><option data-en="Opportunity / Collaboration" data-ar="فرصة / تعاون">Opportunity / Collaboration</option><option data-en="Project Inquiry" data-ar="استفسار مشروع">Project Inquiry</option><option data-en="Just Saying Hi" data-ar="مجرد ترحيب">Just Saying Hi</option></select></div><div class="form-group full"><label data-en="Message" data-ar="الرسالة">Message</label><textarea rows="4" placeholder="Let's work together..." required></textarea></div></div><button type="submit" class="btn-send"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg><span data-en="Send Message" data-ar="إرسال الرسالة">Send Message</span></button></form><div class="form-success" id="formSuccess">✅ Message sent! I'll get back to you within 24 hours.</div></div></div></div></section>
 <footer><span>© 2026 Mai Mohamed Beltagy — Junior Data Analyst & AI Specialist</span><span style="color:var(--accent);font-weight:700;">Mai.Beltagy</span><span data-en="Cairo, Egypt · Open for opportunities" data-ar="القاهرة، مصر · متاحة للفرص">Cairo, Egypt · Open for opportunities</span></footer>
-
 <script>
-// CV DOWNLOAD (placeholder text cv)
-document.getElementById('cvDownloadBtn').addEventListener('click', function(e){
-  e.preventDefault();
-  alert(currentLang === 'ar' ? 'سيتم إتاحة تحميل السيرة الذاتية قريبًا.' : 'CV download will be available soon. Contact me directly.');
-});
-// Language Toggle
 let currentLang = 'en';
-const phrasesEn = ['Python & Pandas','SQL & Databases','Power BI & DAX','Excel Analysis','Data Visualization','Engineering Simulation'];
-const phrasesAr = ['Python و Pandas','SQL وقواعد البيانات','Power BI و DAX','تحليلات Excel','تصوير البيانات','المحاكاة الهندسية'];
+const phrasesEn = ['Python & Pandas','SQL & Databases','Power BI & DAX','Excel Analysis','ML & Predictive Models'];
+const phrasesAr = ['Python و Pandas','SQL وقواعد البيانات','Power BI و DAX','تحليلات Excel','نماذج التعلم الآلي'];
+document.getElementById('cvDownloadBtn').addEventListener('click', function(e){ e.preventDefault(); alert(currentLang === 'ar' ? 'سيتم إتاحة تحميل السيرة الذاتية قريبًا. تواصل معي مباشرة.' : 'CV download will be available soon. Contact me directly.'); });
 function setLang(lang) {
   currentLang = lang;
   document.getElementById('htmlRoot').setAttribute('lang', lang);
   document.getElementById('btnEn').classList.toggle('active', lang==='en');
   document.getElementById('btnAr').classList.toggle('active', lang==='ar');
   document.querySelectorAll('[data-en]').forEach(el => { const val = el.getAttribute('data-' + lang); if(val) { if(el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = val; else el.innerHTML = val; } });
-  document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => { el.placeholder = el.getAttribute('data-placeholder-' + lang); });
   clearTimeout(typeTimer); pIdx=0;cIdx=0;deleting=false; typeLoop();
 }
 let typedEl=document.getElementById('typedText'), pIdx=0,cIdx=0,deleting=false,typeTimer;
@@ -390,3 +225,4 @@ reveals.forEach(r=>new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.i
 </script>
 </body>
 </html>
+```
